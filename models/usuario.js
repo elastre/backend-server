@@ -13,7 +13,8 @@ var usuarioSchema = new Schema({
     email       : { type: String, unique: true, required: [true,'Email de usuario requerido']},
     password    : { type: String, required: [true,'Contraseña de usuario requerida']},
     img         : { type: String, required: false},
-    role        : { type: String, required: true, default: 'USER_ROLE', enum: rolesValidos}
+    role        : { type: String, required: true, default: 'USER_ROLE', enum: rolesValidos},
+    google      : { type: Boolean, default: false} 
 });
 
 usuarioSchema.plugin(mongooseValidator,{message:"{PATH} debe ser unico"});
