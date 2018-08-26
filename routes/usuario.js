@@ -75,7 +75,7 @@ app.put('/:id',mdAutenticacion.verificaToken,(req,res)=>{
     var body = req.body;
 
     //busco el usuario por el id y excluyo el password de la consulta para no mostrarlo ;)
-    Usuario.findById(id,'nombre email img role',(err, usuario)=>{
+    Usuario.findById(id,'nombre email img role google',(err, usuario)=>{
         if(err){
             return res.status(500).json({
                 ok: false,
