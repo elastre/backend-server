@@ -122,7 +122,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
     };
 
     if (tipo==='usuarios'){       
-        Usuario.findById(id,'nombre email img',(err,usuario)=>{
+        Usuario.findById(id,'nombre email img google',(err,usuario)=>{
              if(err){
                  return res.status(400).json({
                      ok: false,
